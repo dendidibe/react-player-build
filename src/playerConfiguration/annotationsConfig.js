@@ -2,8 +2,8 @@ export const annotationsObjects = [
   {
     id: 1,
     range: {
-      start: 3,
-      end: 15,
+      start: 10,
+      end: 120,
     },
     shape: {},
     comments: [
@@ -17,7 +17,7 @@ export const annotationsObjects = [
   {
     id: 2,
     range: {
-      start: 7,
+      start: 125,
       end: null,
     },
     shape: {},
@@ -32,8 +32,8 @@ export const annotationsObjects = [
   {
     id: 3,
     range: {
-      start: 7,
-      end: 11,
+      start: 200,
+      end: 500,
     },
     shape: {},
     comments: [
@@ -47,7 +47,7 @@ export const annotationsObjects = [
   {
     id: 4,
     range: {
-      start: 16,
+      start: 520,
       end: null,
     },
     shape: {},
@@ -62,7 +62,7 @@ export const annotationsObjects = [
   {
     id: 5,
     range: {
-      start: 19,
+      start: 752,
       end: null,
     },
     shape: {},
@@ -92,8 +92,8 @@ export const annotationsObjects = [
   {
     id: 7,
     range: {
-      start: 18,
-      end: 30,
+      start: 971,
+      end: 1245,
     },
     shape: {},
     comments: [

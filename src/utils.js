@@ -10,3 +10,4 @@ export let annotationsList = annotationsObjects.map((item) => {
     annotation: item.comments[0].body,
   };
 });
+

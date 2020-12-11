@@ -6,7 +6,8 @@ export const videoPlayerConfig = {
   controls: true,
   sources: [
     {
-      src: "src/assets/videoplayback.mp4",
+      src:
+        "https://drive.google.com/uc?export=download&id=17XgiNPIJFUdnqJ1KDNIzsH4lMvF8bVN5",
       type: "video/mp4",
     },
   ],
