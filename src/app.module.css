@@ -1,0 +1,14 @@
+.vac-marker {
+  background-color: #a50000 !important ;
+}
+.vac-marker.vac-active {
+  background-color: #1ce067 !important ;
+}
+
+.vac-marker.vac-hovering {
+  background-color: #c3e01c !important ;
+}
+.vac-ranged-marker {
+  box-shadow: none !important;
+  background-color: rgba(0, 166, 194, 0.65) !important;
+}

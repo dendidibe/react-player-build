@@ -55,7 +55,52 @@ export const annotationsObjects = [
       {
         id: 4,
         meta: {},
-        body: "The second Marker!",
+        body: "The fourth Marker!",
+      },
+    ],
+  },
+  {
+    id: 5,
+    range: {
+      start: 19,
+      end: null,
+    },
+    shape: {},
+    comments: [
+      {
+        id: 5,
+        meta: {},
+        body: "The fifth Marker!",
+      },
+    ],
+  },
+  {
+    id: 6,
+    range: {
+      start: 25,
+      end: null,
+    },
+    shape: {},
+    comments: [
+      {
+        id: 6,
+        meta: {},
+        body: "The third comment!",
+      },
+    ],
+  },
+  {
+    id: 7,
+    range: {
+      start: 18,
+      end: 30,
+    },
+    shape: {},
+    comments: [
+      {
+        id: 7,
+        meta: {},
+        body: "The fourth Marker!",
       },
     ],
   },

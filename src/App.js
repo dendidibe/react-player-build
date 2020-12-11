@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
@@ -12,6 +13,7 @@ import { annotationsList } from "./utils";
 
 export const App = () => {
   const [player, setPlayer] = useState(null);
+  const [id, setId] = useState(null);
 
   const markersList = annotationsList.filter(
     (annotation) => annotation.range.end === null
@@ -25,29 +27,33 @@ export const App = () => {
   };
 
   return (
-    <Container maxWidth="md">
-      <VideoPlayer {...videoPlayerConfig} setPlayer={setPlayer} />
-      <ButtonGroup
-        color="secondary"
-        aria-label="outlined secondary button group"
-      >
-        {phasesList.map((item) => (
-          <Button
-            variant="outlined"
-            color="secondary"
-            key={item.id}
-            onClick={() => setTime(item.range.start)}
-          >
-            {item.annotation}
-          </Button>
-        ))}
-      </ButtonGroup>
+    <Container maxWidth="lg">
+      <VideoPlayer {...videoPlayerConfig} setPlayer={setPlayer} setId={setId} />
+      <div className="box">
+        <ButtonGroup
+          color="secondary"
+          aria-label="outlined secondary button group"
+        >
+          {phasesList.map((item) => (
+            <Button
+              variant="contained"
+              color={item.id === id ? "primary" : "default"}
+              key={item.id}
+              onClick={() => setTime(item.range.start)}
+            >
+              {item.annotation}
+            </Button>
+          ))}
+        </ButtonGroup>
+      </div>
+
       <List>
         {markersList.map((marker, i) => (
           <ListItem
             key={marker.id}
             button
             onClick={() => setTime(marker.range.start)}
+            style={{ backgroundColor: marker.id === id ? "yellow" : "" }}
           >
             <ListItemText
               primary={`Phase ${i + 1}`}

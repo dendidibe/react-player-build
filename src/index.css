@@ -7,17 +7,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.vac-marker {
-  background-color: #a50000 !important ;
+.player {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-.vac-marker.vac-active {
-  background-color: #1ce067 !important ;
+.box {
+  margin-top: 1rem;
 }
-
-.vac-marker.vac-hovering {
-  background-color: #c3e01c !important ;
+.yellow {
+  background-color: rgb(233, 219, 24);
+}
+.red {
+  background-color: rgb(187, 13, 27);
 }
 .vac-ranged-marker {
   box-shadow: none !important;
-  background-color: rgba(0, 166, 194, 0.65) !important;
+}
+.video-js.vac-active .vac-control {
+  display: none !important;
 }

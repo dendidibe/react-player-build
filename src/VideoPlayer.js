@@ -18,6 +18,10 @@ export class VideoPlayer extends React.Component {
     });
     this.plugin = this.player.annotationComments(pluginOptions);
     this.props.setPlayer(this.player);
+    this.plugin.registerListener("annotationOpened", (event) => {
+      this.id = event.detail.annotation.id;
+      this.props.setId(this.id);
+    });
   }
   // destroy player on unmount
   componentWillUnmount() {
@@ -31,7 +35,7 @@ export class VideoPlayer extends React.Component {
       <div data-vjs-player>
         <video
           ref={(node) => (this.videoNode = node)}
-          className="video-js"
+          className="video-js player vjs-big-play-centered"
         ></video>
       </div>
     );
