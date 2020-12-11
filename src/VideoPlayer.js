@@ -7,7 +7,7 @@ import { pluginOptions } from "./playerConfiguration/annotationsConfig";
 import "video.js/dist/video-js.css";
 import "@contently/videojs-annotation-comments/build/css/annotations.css";
 
-export default class VideoPlayer extends React.Component {
+export class VideoPlayer extends React.Component {
   componentDidMount() {
     videojs.registerPlugin("annotationComments", AnnotationComments(videojs));
 
@@ -17,6 +17,7 @@ export default class VideoPlayer extends React.Component {
       console.log("onPlayerReady", this);
     });
     this.plugin = this.player.annotationComments(pluginOptions);
+    this.props.setPlayer(this.player);
   }
   // destroy player on unmount
   componentWillUnmount() {

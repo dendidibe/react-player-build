@@ -1,4 +1,4 @@
-const annotationsObjects = [
+export const annotationsObjects = [
   {
     id: 1,
     range: {
@@ -25,7 +25,37 @@ const annotationsObjects = [
       {
         id: 2,
         meta: {},
-        body: "The second comment!",
+        body: "The first marker!",
+      },
+    ],
+  },
+  {
+    id: 3,
+    range: {
+      start: 7,
+      end: 11,
+    },
+    shape: {},
+    comments: [
+      {
+        id: 3,
+        meta: {},
+        body: "The third comment!",
+      },
+    ],
+  },
+  {
+    id: 4,
+    range: {
+      start: 16,
+      end: null,
+    },
+    shape: {},
+    comments: [
+      {
+        id: 4,
+        meta: {},
+        body: "The second Marker!",
       },
     ],
   },
