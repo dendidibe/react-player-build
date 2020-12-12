@@ -1,25 +1,38 @@
 import React, { useState } from "react";
 
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import List from "@material-ui/core/List";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItem from "@material-ui/core/ListItem";
+import {
+  Button,
+  ListItemText,
+  List,
+  ButtonGroup,
+  Container,
+  ListItem,
+} from "@material-ui/core";
+
+import {
+  useMarkerColor,
+  usePhaseColor,
+  useStyles,
+} from "./styledComponents/index";
 
 import { VideoPlayer } from "./VideoPlayer";
 import { videoPlayerConfig } from "./playerConfiguration/videoPlayerConfig";
 import { annotationsList } from "./utils";
 
 export const App = () => {
+  const classes = useStyles();
+  const phaseColor = usePhaseColor();
+  const markerColor = useMarkerColor();
+
   const [player, setPlayer] = useState(null);
   const [id, setId] = useState(null);
 
   const markersList = annotationsList.filter(
     (annotation) => annotation.range.end === null
   );
+
   const phasesList = annotationsList.filter(
-    (annotation) => annotation.range.end !== null
+    (annotation) => annotation.range.end
   );
 
   const setTime = (time) => {
@@ -34,14 +47,15 @@ export const App = () => {
           color="secondary"
           aria-label="outlined secondary button group"
         >
-          {phasesList.map((item) => (
+          {phasesList.map((item, i) => (
             <Button
               variant="contained"
-              color={item.id === id ? "primary" : "default"}
-              key={item.id}
+              className={`${
+                item.id === id ? phaseColor.bgColorActive : phaseColor.bgColor
+              } ${classes.margin}`}
               onClick={() => setTime(item.range.start)}
             >
-              {item.annotation}
+              {`Phase ${i + 1}`}
             </Button>
           ))}
         </ButtonGroup>
@@ -53,7 +67,9 @@ export const App = () => {
             key={marker.id}
             button
             onClick={() => setTime(marker.range.start)}
-            style={{ backgroundColor: marker.id === id ? "yellow" : "" }}
+            className={
+              marker.id === id ? markerColor.bgColorActive : markerColor.bgColor
+            }
           >
             <ListItemText
               primary={`Phase ${i + 1}`}

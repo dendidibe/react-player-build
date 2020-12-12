@@ -10,14 +10,15 @@ export const annotationsObjects = [
       {
         id: 1,
         meta: {},
-        body: "The first comment!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
   {
     id: 2,
     range: {
-      start: 125,
+      start: 4,
       end: null,
     },
     shape: {},
@@ -25,14 +26,15 @@ export const annotationsObjects = [
       {
         id: 2,
         meta: {},
-        body: "The first marker!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
       },
     ],
   },
   {
     id: 3,
     range: {
-      start: 200,
+      start: 113,
       end: 500,
     },
     shape: {},
@@ -40,7 +42,8 @@ export const annotationsObjects = [
       {
         id: 3,
         meta: {},
-        body: "The third comment!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
       },
     ],
   },
@@ -55,14 +58,15 @@ export const annotationsObjects = [
       {
         id: 4,
         meta: {},
-        body: "The fourth Marker!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
       },
     ],
   },
   {
     id: 5,
     range: {
-      start: 752,
+      start: 360,
       end: null,
     },
     shape: {},
@@ -70,7 +74,8 @@ export const annotationsObjects = [
       {
         id: 5,
         meta: {},
-        body: "The fifth Marker!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
       },
     ],
   },
@@ -85,7 +90,8 @@ export const annotationsObjects = [
       {
         id: 6,
         meta: {},
-        body: "The third comment!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
       },
     ],
   },
@@ -100,7 +106,24 @@ export const annotationsObjects = [
       {
         id: 7,
         meta: {},
-        body: "The fourth Marker!",
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
+      },
+    ],
+  },
+  {
+    id: 8,
+    range: {
+      start: 120,
+      end: null,
+    },
+    shape: {},
+    comments: [
+      {
+        id: 8,
+        meta: {},
+        body:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.!",
       },
     ],
   },

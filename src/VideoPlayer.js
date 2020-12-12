@@ -14,11 +14,12 @@ export class VideoPlayer extends React.Component {
     // instantiate Video.js
 
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
-      console.log("onPlayerReady", this);
+      console.log("PlayerReady");
     });
     this.plugin = this.player.annotationComments(pluginOptions);
     this.props.setPlayer(this.player);
     this.plugin.registerListener("annotationOpened", (event) => {
+      // Get active phase
       this.id = event.detail.annotation.id;
       this.props.setId(this.id);
     });
