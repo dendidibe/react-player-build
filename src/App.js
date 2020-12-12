@@ -6,10 +6,10 @@ import {
   List,
   ButtonGroup,
   Container,
-  ListItem,
 } from "@material-ui/core";
 
 import {
+  ColorListItem,
   useMarkerColor,
   usePhaseColor,
   useStyles,
@@ -17,9 +17,10 @@ import {
 
 import { VideoPlayer } from "./VideoPlayer";
 import { videoPlayerConfig } from "./playerConfiguration/videoPlayerConfig";
-import { annotationsList } from "./utils";
+import { annotationsList } from "./utils/utils";
 
 export const App = () => {
+
   const classes = useStyles();
   const phaseColor = usePhaseColor();
   const markerColor = useMarkerColor();
@@ -63,7 +64,7 @@ export const App = () => {
 
       <List>
         {markersList.map((marker, i) => (
-          <ListItem
+          <ColorListItem
             key={marker.id}
             button
             onClick={() => setTime(marker.range.start)}
@@ -72,10 +73,13 @@ export const App = () => {
             }
           >
             <ListItemText
-              primary={`Phase ${i + 1}`}
+              primary={`Event ${i + 1}`}
               secondary={marker.annotation}
+              classes={{
+                secondary: classes.secondary
+              }}
             />
-          </ListItem>
+          </ColorListItem>
         ))}
       </List>
     </Container>

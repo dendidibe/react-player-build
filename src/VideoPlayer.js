@@ -37,7 +37,7 @@ export class VideoPlayer extends React.Component {
         <video
           ref={(node) => (this.videoNode = node)}
           className="video-js player vjs-big-play-centered"
-        ></video>
+        />
       </div>
     );
   }

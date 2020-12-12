@@ -1,4 +1,4 @@
-import { annotationsObjects } from "./playerConfiguration/annotationsConfig";
+import { annotationsObjects } from "../playerConfiguration/annotationsConfig";
 
 export const annotationsList = annotationsObjects
   .map((item) => {
