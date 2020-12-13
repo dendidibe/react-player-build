@@ -19,8 +19,9 @@ import { VideoPlayer } from "./VideoPlayer";
 import { videoPlayerConfig } from "./playerConfiguration/videoPlayerConfig";
 import { annotationsList } from "./utils/utils";
 
-export const App = () => {
+import arrow from "./assets/arrow.png";
 
+export const App = () => {
   const classes = useStyles();
   const phaseColor = usePhaseColor();
   const markerColor = useMarkerColor();
@@ -57,6 +58,7 @@ export const App = () => {
               onClick={() => setTime(item.range.start)}
             >
               {`Phase ${i + 1}`}
+              <img src={arrow} alt="arrow" className="arrow" />
             </Button>
           ))}
         </ButtonGroup>
@@ -76,7 +78,7 @@ export const App = () => {
               primary={`Event ${i + 1}`}
               secondary={marker.annotation}
               classes={{
-                secondary: classes.secondary
+                secondary: classes.secondary,
               }}
             />
           </ColorListItem>
